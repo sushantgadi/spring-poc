@@ -1,0 +1,12 @@
+package com.opensource.kagazi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class KagaziApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(KagaziApplication.class, args);
+	}
+}
