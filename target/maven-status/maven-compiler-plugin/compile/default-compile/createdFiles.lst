@@ -1,2 +1,9 @@
 com\opensource\kagazi\KagaziApplication.class
+com\opensource\kagazi\to\ResponseTO.class
 com\opensource\kagazi\rest\CoreController.class
+com\opensource\kagazi\model\Auditable.class
+com\opensource\kagazi\service\impl\CoreServiceImpl.class
+com\opensource\kagazi\SwaggerConfig.class
+com\opensource\kagazi\service\CoreService.class
+com\opensource\kagazi\model\KagaziMst.class
+com\opensource\kagazi\repository\KagaziMstRepository.class
