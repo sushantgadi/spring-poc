@@ -123,6 +123,27 @@
 		</dependency>
 	</dependencies>
 
+	<!-- build profile configuration -->
+	<profiles>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<build.profile.id>prod</build.profile.id>
+				<activatedProperties>prod</activatedProperties>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<build.profile.id>dev</build.profile.id>
+				<activatedProperties>dev</activatedProperties>
+			</properties>
+		</profile>
+	</profiles>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -130,6 +151,18 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<!--Configuration for maven build profile -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<filters>
+			<!-- Ensures that the config.properties file is always loaded from the 
+				configuration directory of the active Maven profile. -->
+			<filter>src/main/resources/application-${build.profile.id}.properties</filter>
+		</filters>
 	</build>
 
 

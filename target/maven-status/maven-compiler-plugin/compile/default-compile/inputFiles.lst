@@ -5,10 +5,12 @@ D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\K
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\model\KagaziMst.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\rest\CoreController.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\to\ResponseTO.java
+D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\repository\KagaziMstDtlRepository.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\repository\KagaziMstRepository.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\rest\package-info.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\SwaggerConfig.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\package-info.java
+D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\model\KagaziMstDtl.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\service\impl\CoreServiceImpl.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\service\package-info.java
 D:\skills_up\code\git_repo\kagazi-services\src\main\java\com\opensource\kagazi\model\Auditable.java
