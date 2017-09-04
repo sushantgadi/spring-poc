@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value = "kagazi/core")
-@CrossOrigin(origins = {"http://localhost:4200","https://kagazi.000webhostapp.com","http://kagazi.in"}, maxAge = 3600)
+@CrossOrigin(origins = {"http://localhost:4200","https://kagazi.000webhostapp.com","http://kagazi.in","http://www.kagazi.in"}, maxAge = 3600)
 public class CoreController {
 
 	static final Logger LOGGER = Logger.getLogger(CoreController.class);
