@@ -5,5 +5,5 @@ import com.opensource.kagazi.to.ResponseTO;
 public interface CoreService {
 	public ResponseTO kagazimst();
 
-	public ResponseTO kagaziMstDtl(Long id);
+	public ResponseTO kagaziMstDtl(String code);
 }

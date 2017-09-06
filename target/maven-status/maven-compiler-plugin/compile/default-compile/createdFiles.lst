@@ -6,6 +6,6 @@ com\opensource\kagazi\model\KagaziMst.class
 com\opensource\kagazi\repository\KagaziMstRepository.class
 com\opensource\kagazi\KagaziApplication.class
 com\opensource\kagazi\model\Auditable.class
-com\opensource\kagazi\SwaggerConfig.class
 com\opensource\kagazi\repository\KagaziMstDtlRepository.class
+com\opensource\kagazi\CacheConfig.class
 com\opensource\kagazi\model\KagaziMstDtl.class

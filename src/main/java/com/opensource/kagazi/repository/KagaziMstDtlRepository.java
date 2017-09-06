@@ -10,7 +10,7 @@ import com.opensource.kagazi.model.KagaziMstDtl;
 @Repository
 public interface KagaziMstDtlRepository extends CrudRepository<KagaziMstDtl, Long> {
 
-	@Query("select m from KagaziMstDtl m where m.kagazi_mst_id=:id")
-	public Iterable<KagaziMstDtl> getDtlByMstId(@Param("id") Long id);
+	@Query("select m from KagaziMstDtl m where m.code=:code")
+	public Iterable<KagaziMstDtl> getDtlByCode(@Param("code") String code);
 
 }

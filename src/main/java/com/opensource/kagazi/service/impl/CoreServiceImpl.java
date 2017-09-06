@@ -3,8 +3,10 @@ package com.opensource.kagazi.service.impl;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import com.opensource.kagazi.CacheConfig;
 import com.opensource.kagazi.model.KagaziMst;
 import com.opensource.kagazi.model.KagaziMstDtl;
 import com.opensource.kagazi.repository.KagaziMstDtlRepository;
@@ -34,19 +36,21 @@ public class CoreServiceImpl implements CoreService {
 	 * @see com.opensource.kagazi.service.CoreService#kagazimst()
 	 */
 	@Override
+	@Cacheable(CacheConfig.KAGAZI_MST)
 	public ResponseTO kagazimst() {
 		Iterable<KagaziMst> kagaziMst = kagaziRepository.findAll();
 		return new ResponseTO(kagaziMst);
 	}
 
 	/*
-	 * to get kagazi mst detail using id (non-Javadoc)
+	 * to get kagazi mst detail using code (non-Javadoc)
 	 * 
 	 * @see com.opensource.kagazi.service.CoreService#kagaziMstDtl(int)
 	 */
 	@Override
-	public ResponseTO kagaziMstDtl(Long id) {
-		Iterable<KagaziMstDtl> kagaziMstDtl = kagaziMstDtlRepository.getDtlByMstId(id);
+	@Cacheable(CacheConfig.KAGAZI_MST_DTL)
+	public ResponseTO kagaziMstDtl(String code) {
+		Iterable<KagaziMstDtl> kagaziMstDtl = kagaziMstDtlRepository.getDtlByCode(code);
 		return new ResponseTO(kagaziMstDtl);
 	}
 

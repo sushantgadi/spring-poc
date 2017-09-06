@@ -18,7 +18,8 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value = "kagazi/core")
-@CrossOrigin(origins = {"http://localhost:4200","https://kagazi.000webhostapp.com","http://kagazi.in","http://www.kagazi.in"}, maxAge = 3600)
+@CrossOrigin(origins = { "http://localhost:4200", "https://kagazi.000webhostapp.com", "http://kagazi.in",
+		"http://www.kagazi.in" }, maxAge = 3600)
 public class CoreController {
 
 	static final Logger LOGGER = Logger.getLogger(CoreController.class);
@@ -32,13 +33,12 @@ public class CoreController {
 		LOGGER.info("CoreController /kagazi-mst Method starts...");
 		return new ResponseEntity<ResponseTO>(coreservice.kagazimst(), HttpStatus.OK);
 	}
-	
-	
-	@ApiOperation(value = "Master data detail for the government documents using mst_id", notes = "Returns the detail of kagazi master using id")
-	@RequestMapping(value = "/kagazi-mst-dtl/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ResponseTO> kagaziMstDtl(@PathVariable(name="id") Long id) {
+
+	@ApiOperation(value = "Master data detail for the government documents using code", notes = "Returns the detail of kagazi master using code")
+	@RequestMapping(value = "/kagazi-mst-dtl/{code}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<ResponseTO> kagaziMstDtl(@PathVariable(name = "code") String code) {
 		LOGGER.info("CoreController /kagazi-mst-dtl Method starts...");
-		return new ResponseEntity<ResponseTO>(coreservice.kagaziMstDtl(id), HttpStatus.OK);
+		return new ResponseEntity<ResponseTO>(coreservice.kagaziMstDtl(code), HttpStatus.OK);
 	}
 
 }
