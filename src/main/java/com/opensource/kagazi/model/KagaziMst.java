@@ -75,4 +75,20 @@ public class KagaziMst extends Auditable implements Serializable {
 		this.image_url = image_url;
 	}
 
+	public KagaziMst(Long id, String code, String name, String description, String image_url) {
+		super();
+		this.id = id;
+		this.code = code;
+		this.name = name;
+		this.description = description;
+		this.image_url = image_url;
+	}
+
+	public KagaziMst() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
 }

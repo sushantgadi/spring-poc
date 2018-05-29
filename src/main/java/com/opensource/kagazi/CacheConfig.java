@@ -19,11 +19,11 @@ public class CacheConfig {
 
 	@Bean
 	public Cache cacheKagaziMst() {
-		return new GuavaCache(KAGAZI_MST, CacheBuilder.newBuilder().expireAfterWrite(3600, TimeUnit.MINUTES).build());
+		return new GuavaCache(KAGAZI_MST, CacheBuilder.newBuilder().expireAfterWrite(720, TimeUnit.HOURS).build());
 	}
 
 	@Bean
 	public Cache cacheKagaziMstDtl() {
-		return new GuavaCache(KAGAZI_MST_DTL, CacheBuilder.newBuilder().expireAfterWrite(3600, TimeUnit.MINUTES).build());
+		return new GuavaCache(KAGAZI_MST_DTL, CacheBuilder.newBuilder().expireAfterWrite(720, TimeUnit.HOURS).build());
 	}
 }
